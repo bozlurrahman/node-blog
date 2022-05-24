@@ -20,36 +20,37 @@ export const MONGODB = {
     password: process.env.MONGODB_PASSWORD || '',
 };
 
-export const TOKEN_SECRET_KEY = 'NODEBLOG/bs32g1038@163.com/TOKEN';
+export const TOKEN_SECRET_KEY = 'NODEBLOG/bozlurrahman.cmt@gmail.com/TOKEN';
 
-export const GITHUB_SECRET_KEY = 'Github/bs32g1038@163.com/TOKEN';
+export const GITHUB_SECRET_KEY = 'Github/bozlurrahman.cmt@gmail.com/TOKEN';
 
 export const ADMIN_USER_INFO = {
-    nickName: '李志成',
-    email: 'bs32g1038@163.com',
-    location: '广东 广州',
+    nickName: 'Bozlur Rahman',
+    email: 'bozlurrahman.cmt@gmail.com',
+    location: 'Dhaka',
 };
 
 export const RSS = {
-    title: '李志成的个人网站',
+    title: 'Bozlur Rahman\'s personal website',
     link: 'http://www.lizc.net',
     language: 'zh-cn',
-    description: '博客小站，专注于web开发，尤其是前端开发。喜欢和同道中人一起搞开发！',
+    description: 'Blog station, focusing on web development, especially front-end development. I like to develop with fellow people!',
     maxRssItems: 50,
 };
 
 /**
- * 间隔时间 1 个小时 (60 * 60 * 1000毫秒)
- * 每个 ip 最多 30 条
+ * Interval time 1 hour (60 * 60 * 1000ms)
+ * Up to 30 entries per ip
  */
 export const API_COMMENT_POST_RATE_LIMIT = {
     windowMs: 60 * 60 * 1000,
     max: 30,
 };
 
+
 /**
- * 间隔时间 1 个小时 (60 * 60 * 1000毫秒)
- * 每个 ip 最多 5000 次请求
+ * Interval time 1 hour (60 * 60 * 1000ms)
+ * Up to 5000 entries per ip
  */
 export const API_REQUEST_RATE_LIMIT = {
     windowMs: 60 * 60 * 1000,

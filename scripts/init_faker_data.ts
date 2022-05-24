@@ -48,7 +48,7 @@ const init = async () => {
     }
     await FileModel.create(files);
 
-    console.log('生成虚拟数据完成。。。');
+    console.log('Dummy data generation completed');
 
     process.exit(0);
 };

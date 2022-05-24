@@ -170,7 +170,7 @@ export default function Comments() {
                     dataSource={state.comments}
                     onChange={(pagination) => handleTableChange(pagination)}
                     pagination={{
-                        showTotal: (total) => `共 ${total} 条评论数据`,
+                        showTotal: (total) => `共 ${total} comments数据`,
                     }}
                     expandedRowRender={(record) => {
                         return (

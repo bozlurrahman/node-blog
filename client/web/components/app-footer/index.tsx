@@ -18,14 +18,14 @@ export const AppFooter = () => {
                 <div className={style.siteInfo}>
                     <div className={style.svgWrap}>
                         <ReactSVG src={config.siteLogo} />
-                        <p className={style.siteTitle}>欢迎来到 {config.siteTitle} 😀</p>
+                        <p className={style.siteTitle}>Welcome to{config.siteTitle} 😀</p>
                     </div>
-                    <p className={style.siteTitle}>这里主要分享前后端技术文章，致力于web技术研究。</p>
+                    <p className={style.siteTitle}>Here we mainly share front-end and back-end technical articles, and are dedicated to web technology research.</p>
                 </div>
                 <div className={style.contact}>
                     <div className={style.contactTitle}>Contact us: </div>
                     <div className={style.contactList}>
-                        <a href="mailto:bs32g1038@163.com">
+                        <a href="mailto:bozlurrahman.cmt@gmail.com">
                             <EmailIcon></EmailIcon>
                         </a>
                         <a>
@@ -40,7 +40,7 @@ export const AppFooter = () => {
                     </div>
                 </div>
                 <div className={style.statement}>
-                    <BlogRuningTime></BlogRuningTime>&nbsp;&nbsp;版权 © 2016-{new Date().getFullYear()}{' '}
+                    <BlogRuningTime></BlogRuningTime>&nbsp;&nbsp;copyright© 2016-{new Date().getFullYear()}{' '}
                     {config.siteTitle}
                     <a href={config.icpGovCn}>
                         <img src={icpPng.src} alt={icpPng.src} />
@@ -49,8 +49,8 @@ export const AppFooter = () => {
                 </div>
             </section>
             <section className={style.support}>
-                <h3>商务合作</h3>
-                <p>承包前后端业务，联系前，请明确你的需求，最低报价，工期。</p>
+                <h3>Business Cooperation</h3>
+                <p>Contract front-end and back-end business, before contacting, please clarify your needs, minimum quotation, construction period</p>
                 <div className={style.supportList}>
                     <a href="https://nestjs.com">
                         <img src={require('@blog/client/assets/svgs/logo-nestjs.svg')} />

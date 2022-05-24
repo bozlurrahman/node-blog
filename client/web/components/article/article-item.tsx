@@ -18,7 +18,7 @@ export default function ArticleItem(props: Props) {
     return (
         <div className={style.article}>
             <Breadcrumb separator=">">
-                <Breadcrumb.Item>首页</Breadcrumb.Item>
+                <Breadcrumb.Item>front page</Breadcrumb.Item>
                 <Breadcrumb.Item>
                     <Link href={'/blog/articles?cid=' + (article.category && article.category._id)} passHref={true}>
                         <a>{article.category && article.category.name}</a>
@@ -35,15 +35,15 @@ export default function ArticleItem(props: Props) {
                     </a>
                 </Link>
                 <div className={style.articleMetaInfo}>
-                    <span>发表于{parseTime(article.createdAt)}</span>
+                    <span>Published on {parseTime(article.createdAt)}</span>
                     <span>
-                        分类于
+                        classified in
                         <Link href={`/blog/articles?cid=${article.category && article.category._id}`} passHref={true}>
                             <a>{article.category && article.category.name}</a>
                         </Link>
                     </span>
-                    <span>{article.commentCount}条评论</span>
-                    <span>阅读次数{article.viewsCount}</span>
+                    <span>{article.commentCount}comments</span>
+                    <span>number of times read{article.viewsCount}</span>
                 </div>
             </div>
             <div className={style.articleContent}>
@@ -51,23 +51,20 @@ export default function ArticleItem(props: Props) {
             </div>
             <div className={style.statement}>
                 <div>
-                    <strong>本文链接：</strong>
+                    <strong>Link to this article ：</strong>
                     <ArticleAddress articleId={article._id}></ArticleAddress>
                 </div>
                 <div>
-                    <strong>版权声明：</strong>
+                    <strong>Copyright Notice：</strong>
                     <span>
-                        自由转载-署名-非商业性使用
-                        <i> | </i>
-                        <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0 CN</a>
-                        许可协议。
+                        Free reprint - attribution - non-commercial use
                     </span>
                 </div>
             </div>
             <div className={style.footer}>
                 {article.prev && (
                     <div>
-                        <strong>上一篇：</strong>
+                        <strong>Previous：</strong>
                         <Link href={`/blog/articles/${article.prev._id}`} passHref={true}>
                             <a>{article.prev.title}</a>
                         </Link>
@@ -75,7 +72,7 @@ export default function ArticleItem(props: Props) {
                 )}
                 {article.next && (
                     <div>
-                        <strong>下一篇：</strong>
+                        <strong>Next：</strong>
                         <Link href={`/blog/articles/${article.next._id}`} passHref={true}>
                             <a>{article.next.title}</a>
                         </Link>

@@ -32,7 +32,7 @@ export const getArticle = (obj = {}) => {
 export const getComment = (obj = {}) => {
     return {
         nickName: faker.name.findName(),
-        email: 'bs32g1038@163.com',
+        email: 'bozlurrahman.cmt@gmail.com',
         article: null,
         reply: null,
         content: faker.lorem.paragraph(),
