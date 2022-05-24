@@ -19,7 +19,7 @@ export const getExplore = () => {
 
 export const getArticle = (obj = {}) => {
     return {
-        title: faker.lorem.sentence(),
+        title: faker.lorem.sentence(5),
         content: faker.lorem.paragraphs(),
         summary: faker.lorem.paragraph(),
         screenshot: faker.image.imageUrl(),

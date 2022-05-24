@@ -7,11 +7,14 @@
   "license": "MIT",
   "author": {
     "name": "Jason Li",
-    "email": "bs32g1038@163.com"
+    "email": "bozlurrahman.cmt@gmail.com"
   },
   "scripts": {
     "prebuild:server": "rimraf dist",
-    "init:dev:data": "tsc -p tsconfig.build.json && cross-env NODE_ENV=development node dist-server/scripts/init_faker_data.js",
+    "init:dev:data": "tsc -P tsconfig.build.json && cross-env NODE_ENV=development node dist-server/scripts/init_faker_data.js --traceResolution",
+    "init:dev:data1": "tsc -P tsconfig.build.json",
+    "init:dev:data2": "resolve-tspaths -p tsconfig.test.json -s dist-server -o dist-server --verbose",
+    "init:dev:data3": "cross-env NODE_ENV=development node dist-server/scripts/init_faker_data.js ",
     "dev:server": "npm run build:server && cross-env NODE_ENV=development nest start",
     "dev:server:watch": "cross-env NODE_ENV=development nest start --watch",
     "dev:server:debug": "cross-env NODE_ENV=development nest start --debug --watch",
@@ -129,6 +132,7 @@
     "react-redux": "^7.2.6",
     "react-svg": "^14.1.15",
     "react-tooltip": "^4.2.21",
+    "resolve-tspaths": "^0.5.0",
     "rimraf": "^3.0.2",
     "sass": "^1.49.9",
     "supertest": "^6.2.2",

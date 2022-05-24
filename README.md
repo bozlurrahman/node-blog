@@ -67,12 +67,16 @@ npm install
 **3，init database data**
 ```
 // this will generate the faker data to database
-npm run init:dev:data
+<!-- npm run init:dev:data -->
+npm run init:dev:data1
+npm run init:dev:data2
+npm run init:dev:data3
 ```
 
 **4，run app**
 ```
-npm run dev     // development mode
+npm run dev:server     // development mode
+npm run dev:web     // development mode
 ```
 
 **4, build dist**
